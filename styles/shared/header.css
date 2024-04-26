@@ -1,0 +1,166 @@
+:root {
+  --blue: #d9f1f2;
+  --lightblue: #e2f2f8;
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+.header {
+  background-color: var(--blue);
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+
+.header-left-section {
+  width: 180px;
+}
+
+.header-link {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.header-link:hover {
+  border: 1px solid white;
+}
+
+.shoply-logo {
+  color: #fff;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.shoply-logo i {
+  padding-left: 6px;
+  color: lightblue;
+}
+
+.shoply-mobile-logo {
+  display: none;
+  color: darkgray;
+  font-size: 33px;
+  margin-right: 5px; 
+}
+
+.header-middle-section {
+  flex: 1;
+  max-width: 850px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+}
+
+.search-bar {
+  flex: 1;
+  width: 0;
+  font-size: 16px;
+  height: 38px;
+  padding-left: 15px;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-button {
+  background-color: var(--lightblue);
+  border: none;
+  width: 45px;
+  height: 40px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  flex-shrink: 0;
+}
+
+.search-button i {
+  font-size: 20px;
+  color: darkgray;
+}
+
+.header-right-section {
+  width: 180px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: end;
+}
+
+.orders-link {
+  color: white;
+}
+
+.returns-text {
+  display: block;
+  font-size: 13px;
+}
+
+.orders-text {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.cart-link {
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 15px;
+}
+
+.cart-icon {
+  width: 50px;
+}
+
+.cart-quantity {
+  color: darkgrey;
+  font-size: 16px;
+  font-weight: bolder;
+
+  position: absolute;
+  top: 5px;
+  left: 31px;
+  
+  width: 26px;
+  text-align: center;
+}
+
+
+/*media queries*/
+@media (max-width: 800px) {
+  .header-left-section {
+    width: unset;
+  }
+
+  .header-left-section {
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .shoply-logo {
+    display: none;
+  }
+
+  .shoply-mobile-logo {
+    display: block;
+    padding-bottom: 20px;
+  }
+}
